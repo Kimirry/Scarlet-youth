@@ -1,0 +1,110 @@
+/* Specific styles for the About page */
+/* Import main styles */
+@import url('main.css');
+
+.about-section {
+    padding: 60px 20px;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.about-section .span {
+    color: rgba(235, 182, 11, 0.836);
+}
+
+.about-section #content {
+    font-size: 1.1rem;
+    opacity: 0.8;
+    margin: 0 auto 50px auto;
+    max-width: 800px;
+    line-height: 1.8;
+}
+
+.info-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 30px; /* Space between info cards */
+}
+
+.info-wrapper div {
+    flex: 1; /* Allow cards to grow and shrink */
+    min-width: 280px; /* Minimum width for cards */
+    max-width: 380px;
+    border-radius: 10px;
+    padding: 30px;
+    background-color: rgba(172, 255, 47, 0.08); /* Lighter background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    text-align: left; /* Align text within cards to left */
+}
+
+.info-wrapper h3 {
+    color: rgb(23, 155, 23);
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.info-wrapper p {
+    font-size: 1rem;
+    opacity: 0.8;
+    line-height: 1.7;
+}
+
+/* Media Queries for About page */
+@media (max-width: 768px) {
+    .about-section h2 {
+        font-size: 2rem;
+    }
+
+    .about-section #content {
+        font-size: 1rem;
+        margin-bottom: 40px;
+    }
+
+    .info-wrapper {
+        flex-direction: column; /* Stack info cards vertically */
+        align-items: center;
+    }
+
+    .info-wrapper div {
+        max-width: 90%; /* Max width for cards when stacked */
+        padding: 25px;
+    }
+
+    .info-wrapper h3 {
+        font-size: 1.3rem;
+    }
+
+    .info-wrapper p {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .about-section #content {
+        font-size: 0.9rem;
+    }
+
+    .info-wrapper div {
+        padding: 20px;
+    }
+
+    .info-wrapper h3 {
+        font-size: 1.2rem;
+    }
+
+    .info-wrapper p {
+        font-size: 0.85rem;
+    }
+}

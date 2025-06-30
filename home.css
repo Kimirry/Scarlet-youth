@@ -1,0 +1,100 @@
+/* Specific styles for the Home page */
+/* Import main styles */
+@import url('main.css');
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5% auto; /* Center the wrapper and add vertical margin */
+    max-width: 1200px; /* Max width for content */
+    padding: 0 20px; /* Horizontal padding */
+    flex-wrap: wrap; /* Allow content to wrap on smaller screens */
+    gap: 30px; /* Space between content and image */
+}
+
+.content {
+    flex: 1; /* Allow content to take available space */
+    min-width: 300px; /* Minimum width for content block */
+    text-align: center;
+    padding: 20px;
+}
+
+.content h1 {
+    font-size: 2.8rem;
+    justify-content: center;
+    padding-bottom: 20px;
+    color: #333;
+}
+
+#section {
+    color: rgba(235, 182, 11, 0.836);
+}
+
+.content p {
+    font-size: 1.1rem;
+    opacity: 0.7;
+    margin-bottom: 30px;
+}
+
+.btn {
+    background-color: green;
+    border-radius: 30px;
+    border: none;
+    padding: 12px 30px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: darkgreen;
+}
+
+.wrapper img {
+    max-width: 100%; /* Ensure image is responsive */
+    height: auto;
+    flex: 1; /* Allow image to take available space */
+    min-width: 300px; /* Minimum width for image block */
+    border-radius: 8px; /* Slightly rounded corners for the image */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for the image */
+}
+
+/* Media Queries for Home page */
+@media (max-width: 768px) {
+    .content h1 {
+        font-size: 2.2rem;
+    }
+
+    .content p {
+        font-size: 1rem;
+    }
+
+    .wrapper {
+        flex-direction: column; /* Stack content and image vertically */
+        margin: 5% auto;
+        padding: 0 15px;
+    }
+    
+    .wrapper img {
+        margin-top: 30px; /* Space between text and image when stacked */
+    }
+}
+
+@media (max-width: 480px) {
+    .content h1 {
+        font-size: 1.8rem;
+        padding-bottom: 15px;
+    }
+
+    .content p {
+        font-size: 0.9rem;
+        margin-bottom: 20px;
+    }
+
+    .btn {
+        padding: 10px 25px;
+        font-size: 0.9rem;
+    }
+}
